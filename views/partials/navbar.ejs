@@ -1,33 +1,36 @@
-<nav class="p-3 bg-white shadow flex justify-between items-center">
+<nav class="p-3 bg-white shadow flex justify-between items-center z-20">
     <div class="flex items-center space-x-2">
         <img src="/images/profile-picture.jpg" class="w-14 rounded-full border-gray-400 border-2">
         <span class="text-2xl cursor-pointer uppercase tracking-widest">Portfolio</span>
     </div>
-    <ul class="hidden md:flex space-x-8 text-md font-bold mr-20 items-center text-gray-800">
-        <li class="cursor-pointer"><a href="/" class="border-b-4 border-gray-400">Home</a></li>
+    <ul class="hidden md:flex space-x-8 text-md font-bold mr-16 items-center text-gray-800 uppercase">
+        <li class="cursor-pointer"><a href="/">Home</a></li>
         <li class="cursor-pointer"><a href="/about">About</a></li>
         <li class="cursor-pointer"><a href="/projects">Projects</a></li>
         <li class="cursor-pointer bg-slate-300 p-1 rounded-md px-2"><a href="/contact">Contact Me</a></li>
     </ul>
-    <button class="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-gray-200">
-        <div class="w-5 h-1 bg-gray-600 mb-1"></div>
-        <div class="w-5 h-1 bg-gray-600 mb-1"></div>
-        <div class="w-5 h-1 bg-gray-600"></div>
-        <div class="nav-links absolute top-20 left-full h-screen w-6/12 bg-white border opacity-0 transition-all duration-300">
-            <ul class="flex flex-col items-center w-full text-base cursor-pointer pt-10">
-                <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="/" class="border-b-4 border-gray-400">Home</a></li>
-                <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="/about">About</a></li>
-                <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="/projects">Projects</a></li>
-                <li class="hover:bg-gray-200 py-4 px-6 w-full"><a href="/contact">Contact Me</a></li>
-            </ul>
-        </div>
-    </button>
+    <button class="hamburger block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-gray-200">
+        <div class="w-6 h-1 bg-gray-600 mb-1"></div>
+        <div class="w-6 h-1 bg-gray-600 mb-1"></div>
+        <div class="w-6 h-1 bg-gray-600"></div>
+    </button> 
+
+    <div class="nav-links closed absolute md:hidden top-20 left-full h-fit w-full bg-white border transition-all duration-300">
+        <ul class="flex flex-col w-full text-base cursor-pointer font-bold uppercase">
+            <li class="hover:bg-gray-200 py-4 px-6 w-full">
+                <a href="/">Home</a>
+            </li>
+            <li class="hover:bg-gray-200 py-4 px-6 w-full">
+                <a href="/about">About</a>
+            </li>
+            <li class="hover:bg-gray-200 py-4 px-6 w-full">
+                <a href="/projects">Projects</a>
+            </li>
+            <li class="hover:bg-gray-200 py-4 px-6 w-full">
+                <a href="/contact" class="bg-slate-300 p-1 rounded-md px-2">Contact Me</a>
+            </li>
+        </ul>
+    </div>
 </nav>
 
-<script>
-    const btn = document.querySelector('button');
-    btn.addEventListener('click', () => {
-        document.querySelector('.nav-links').classList.add('right-0', 'opacity-1');
-        document.querySelector('.nav-links').classList.remove('left-full', 'opacity-0');
-    });
-</script>
+<script src="/js/responsiveNavbar.js"></script>
