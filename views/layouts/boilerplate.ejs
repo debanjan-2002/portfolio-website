@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="/styles/style.css">
+    <style>
+        html {
+            overflow-y: scroll;
+        }
+    </style>
 </head>
 <body class="bg-blue-200 overflow-x-hidden md:overflow-auto">
     <%- include("../partials/navbar") %>
     <main class="p-3">
+        <%- include('../partials/flash') %>
         <%- body %> 
     </main> 
 </body>
