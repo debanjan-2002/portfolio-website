@@ -68,4 +68,8 @@ app.post("/contact", async (req, res) => {
     }
 });
 
+app.get("/skills", (req, res) => {
+    res.render("skills");
+});
+
 app.listen(3000);
