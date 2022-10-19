@@ -1,0 +1,20 @@
+<% if(success && success.length) { %> 
+    <div class="p-2 py-2.5 text-center mx-auto bg-[#198754] text-white rounded-md border-2 border-white flex space-x-12 w-fit items-center">
+        <div class="text-xl"><%= success %> </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:svgjs="http://svgjs.com/svgjs" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" class="cursor-pointer cross-btn"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 32 32" class="cursor-pointer cross-btn"><g fill="#c9d9db" class="color000 svgShape" data-name="Layer 51"><path d="M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2Zm0 26a12 12 0 1 1 12-12 12 12 0 0 1-12 12Z" class="color000 svgShape cross-btn"/><path d="M22.71 9.29a1 1 0 0 0-1.42 0L16 14.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42L17.41 16l5.3-5.29a1 1 0 0 0 0-1.42Z" class="color000 svgShape cross-btn"/></g></svg></svg>
+    </div> 
+<% } %> 
+
+<% if(error && error.length) { %>
+    <div class="p-2 py-2.5 text-center mx-auto bg-[#dc3545] text-white rounded-md border-2 border-white flex space-x-12 w-fit items-center">
+        <div class="text-xl"><%= error %></div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:svgjs="http://svgjs.com/svgjs" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" class="cross-btn cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 32 32" class="cross-btn cursor-pointer"><g fill="#c9d9db" class="color000 svgShape cross-btn" data-name="Layer 51"><path d="M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2Zm0 26a12 12 0 1 1 12-12 12 12 0 0 1-12 12Z" class="color000 svgShape cross-btn"/><path d="M22.71 9.29a1 1 0 0 0-1.42 0L16 14.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42L17.41 16l5.3-5.29a1 1 0 0 0 0-1.42Z" class="color000 svgShape cross-btn"/></g></svg></svg>
+    </div> 
+<% } %>  
+<script>
+    const crossBtn = document.querySelector('.cross-btn');
+    crossBtn.addEventListener('click', (e) => {
+        console.log(e.target.parentElement);
+        e.target.parentElement.remove();
+    });
+</script>
