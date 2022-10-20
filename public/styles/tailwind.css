@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
+
+.skill-bg-blur {
+    @apply absolute -inset-1 bg-gradient-to-r from-pink-600 to-purple-600 rounded-md blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt;
+}
+
+.skill-card {
+    @apply w-[270px] h-[200px] bg-[#1e1e1e] flex flex-col items-center justify-around p-5 rounded-md relative hover:-translate-y-2 transition duration-200;
+}
+
+.skill-img {
+    @apply bg-white rounded-lg p-1 hover:rotate-[360deg] duration-1000;
+}
 @tailwind utilities;
