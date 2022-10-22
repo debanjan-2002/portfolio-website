@@ -72,4 +72,8 @@ app.get("/skills", (req, res) => {
     res.render("skills");
 });
 
+app.get("/projects", (req, res) => {
+    res.render("projects");
+});
+
 app.listen(3000);
